@@ -31,7 +31,7 @@ void rewrite(Mapa mapa[]){
     }
 
     al_flip_display();
-    al_draw_bitmap(al_load_bitmap("../Imagens/background.jpg"),0,0,0);
+    al_draw_bitmap(al_load_bitmap("bloco.png"),0,0,0);
 }
 
 int main(){
@@ -56,6 +56,8 @@ int main(){
       al_show_native_message_box(display, "Error", "Error", "Falha ao iniciar o display!", NULL, ALLEGRO_MESSAGEBOX_ERROR);
       return 0;
    }
+
+
 
    //Funções teclado
    al_install_keyboard();
@@ -96,22 +98,11 @@ int main(){
     Moeda *moeda = new Moeda[362];
     Pacman *pacman = new Pacman;
 
-    //char image1[] = "../../Others/Imagens/mario-right.png";
-    //char image2[] = "../../Others/Imagens/mario-left.png";
-
-    ALLEGRO_BITMAP *imagem1 = NULL;
-    ALLEGRO_BITMAP *imagem2 = NULL;
-
-
-    imagem1 = al_load_bitmap("Imagens/mario-left.png");
-    imagem2 = al_load_bitmap("Imagens/mario-right.png");
-
-    printf("passei aqui");
-    if(imagem1 == NULL || imagem2 == NULL){
-        printf("NULL");
-    }
+    ALLEGRO_BITMAP *imagem1 = al_load_bitmap("mario-left.png");
+    ALLEGRO_BITMAP *imagem2 = al_load_bitmap("mario-right.png");
 
     for(int i=0; i<19; i++){
+
         for(int j=0; j<21; j++){
             if(matriz[i][j] == 1){
                 mapa[m++].setPos(j*25, i*25);
@@ -125,28 +116,27 @@ int main(){
     }
 
 
-    for(int i = 0; i < 368; i++){
+    for(int i = 0; i < 199; i++){
         mapa[i].imprimeImagem();
     }
 
-    for(int i = 0; i < 362; i++){
+    for(int i = 0; i < 199; i++){
         moeda[i].imprimeImagem();
     }
 
-      //DESENHA PACMAN
+    //DESENHA PACMAN
     for(int i = 0; i < 1; i++){
-        pacman[i].imprimeImagem(0);
+        pacman[i].imprimeImagem(1);
     }
 
     al_flip_display();
     al_rest(5);
 
-    for(int i=0; i<19; i++){
-        for(int j=0; j<21; j++){
-                mapa[m++].destroiImagem();
-        }
-    }
-
+    // for(int i=0; i<19; i++){
+    //     for(int j=0; j<21; j++){
+    //         mapa[m++].destroiImagem();
+    //     }
+    // }
 
     return 0;
 }

@@ -26,7 +26,7 @@ Moeda::~Moeda(){
 
 void Moeda::setPos(int x, int y){
 	al_init_image_addon();
-	this->imagem = al_load_bitmap("Imagens/coin.png");
+	this->imagem = al_load_bitmap("coin.png");
 	al_draw_bitmap(this->imagem, x, y, 0);
 	this->pos_x = x;
 	this->pos_y = y;

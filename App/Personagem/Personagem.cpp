@@ -35,8 +35,6 @@ void Personagem::setPosY(int y){
 }
 
 void Personagem::setImagens(ALLEGRO_BITMAP* img, ALLEGRO_BITMAP* img2){
-    cout << img << endl;
-    cout << img2 << endl;
 	this->imagem[0] = img; //check if it is returning NULL
 	this->imagem[1] = img2; //check if it is returning NULL
 }

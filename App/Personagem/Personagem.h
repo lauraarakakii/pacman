@@ -25,10 +25,10 @@ class Personagem {
 
 		int pos_x, pos_y;
 		int teclaD, direcao;
+		ALLEGRO_BITMAP* imagem[2];
 
 
 	public:
-	    ALLEGRO_BITMAP* imagem[2];
 		void destroiImagem();
 		void setPos(int, int);
 		int getPosX();
