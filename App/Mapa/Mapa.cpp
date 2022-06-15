@@ -27,7 +27,7 @@ Mapa::~Mapa(){
 
 void Mapa::setPos(int x, int y){
     al_init_image_addon();
-    this->imagem = al_load_bitmap("Imagens/bloco.png");
+    this->imagem = al_load_bitmap("bloco.png");
     al_draw_bitmap(this->imagem, x, y, 0);
     this->pos_x = x;
     this->pos_y = y;
