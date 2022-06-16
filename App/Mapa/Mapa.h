@@ -4,6 +4,8 @@
 #ifndef MAPA_h
 #define MAPA_h
 
+using namespace std;
+
 /*----------------- File: Mapa.h ---------------------+
 |DESCRICAO DO ARQUIVO 								  |
 | 													  |
